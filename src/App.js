@@ -7,6 +7,9 @@ import { nice } from './animation';
 // Web Animation API
 import useWebAnimations from '@wellyshen/use-web-animations';
 
+// Images
+import newRoad from './img/newRoad.jpg';
+
 
 
 function App() {
@@ -16,10 +19,10 @@ function App() {
   const { ref: roadStrip1, getAnimation: road1Animation } = useWebAnimations({
     keyframes: [
       { transform: 'translateX(0)' },
-      { transform: 'translateX(-200px)' }
+      { transform: 'translateX(-2500px)' }
     ],
     timing: {
-      duration: 4000,
+      duration: 12000,
       iterations: Infinity,
       direction: "normal"
     }
@@ -28,10 +31,10 @@ function App() {
   const { ref: roadStrip2, getAnimation: road2Animation } = useWebAnimations({
     keyframes: [
       { transform: 'translateX(0)' },
-      { transform: 'translateX(-200px)' }
+      { transform: 'translateX(-2500px)' }
     ],
     timing: {
-      duration: 4000,
+      duration: 12000,
       iterations: Infinity,
       direction: "normal"
     }
@@ -40,10 +43,10 @@ function App() {
   const { ref: roadStrip3, getAnimation: road3Animation } = useWebAnimations({
     keyframes: [
       { transform: 'translateX(0)' },
-      { transform: 'translateX(-200px)' }
+      { transform: 'translateX(-2500px)' }
     ],
     timing: {
-      duration: 4000,
+      duration: 12000,
       iterations: Infinity,
       direction: "normal"
     }
@@ -52,10 +55,10 @@ function App() {
   const { ref: roadStrip4, getAnimation: road4Animation } = useWebAnimations({
     keyframes: [
       { transform: 'translateX(0)' },
-      { transform: 'translateX(-200px)' }
+      { transform: 'translateX(-2500px)' }
     ],
     timing: {
-      duration: 4000,
+      duration: 12000,
       iterations: Infinity,
       direction: "normal"
     }
@@ -64,10 +67,10 @@ function App() {
   const { ref: roadStrip5, getAnimation: road5Animation } = useWebAnimations({
     keyframes: [
       { transform: 'translateX(0)' },
-      { transform: 'translateX(-200px)' }
+      { transform: 'translateX(-2500px)' }
     ],
     timing: {
-      duration: 4000,
+      duration: 12000,
       iterations: Infinity,
       direction: "normal"
     }
@@ -76,10 +79,10 @@ function App() {
   const { ref: roadStrip6, getAnimation: road6Animation } = useWebAnimations({
     keyframes: [
       { transform: 'translateX(0)' },
-      { transform: 'translateX(-200px)' }
+      { transform: 'translateX(-2500px)' }
     ],
     timing: {
-      duration: 4000,
+      duration: 12000,
       iterations: Infinity,
       direction: "normal"
     }
@@ -88,10 +91,10 @@ function App() {
   const { ref: roadStrip7, getAnimation: road7Animation } = useWebAnimations({
     keyframes: [
       { transform: 'translateX(0)' },
-      { transform: 'translateX(-200px)' }
+      { transform: 'translateX(-2500px)' }
     ],
     timing: {
-      duration: 4000,
+      duration: 12000,
       iterations: Infinity,
       direction: "normal"
     }
@@ -100,10 +103,10 @@ function App() {
   const { ref: roadStrip8, getAnimation: road8Animation } = useWebAnimations({
     keyframes: [
       { transform: 'translateX(0)' },
-      { transform: 'translateX(-200px)' }
+      { transform: 'translateX(-2500px)' }
     ],
     timing: {
-      duration: 4000,
+      duration: 12000,
       iterations: Infinity,
       direction: "normal"
     }
@@ -112,10 +115,10 @@ function App() {
   const { ref: roadStrip9, getAnimation: road9Animation } = useWebAnimations({
     keyframes: [
       { transform: 'translateX(0)' },
-      { transform: 'translateX(-200px)' }
+      { transform: 'translateX(-2500px)' }
     ],
     timing: {
-      duration: 4000,
+      duration: 12000,
       iterations: Infinity,
       direction: "normal"
     }
@@ -124,10 +127,10 @@ function App() {
   const { ref: roadStrip10, getAnimation: road10Animation } = useWebAnimations({
     keyframes: [
       { transform: 'translateX(0)' },
-      { transform: 'translateX(-200px)' }
+      { transform: 'translateX(-2500px)' }
     ],
     timing: {
-      duration: 4000,
+      duration: 12000,
       iterations: Infinity,
       direction: "normal"
     }
@@ -136,10 +139,10 @@ function App() {
   const { ref: roadStrip11, getAnimation: road11Animation } = useWebAnimations({
     keyframes: [
       { transform: 'translateX(0)' },
-      { transform: 'translateX(-200px)' }
+      { transform: 'translateX(-2500px)' }
     ],
     timing: {
-      duration: 4000,
+      duration: 12000,
       iterations: Infinity,
       direction: "normal"
     }
@@ -148,10 +151,10 @@ function App() {
   const { ref: roadStrip12, getAnimation: road12Animation } = useWebAnimations({
     keyframes: [
       { transform: 'translateX(0)' },
-      { transform: 'translateX(-200px)' }
+      { transform: 'translateX(-2500px)' }
     ],
     timing: {
-      duration: 4000,
+      duration: 12000,
       iterations: Infinity,
       direction: "normal"
     }
@@ -160,10 +163,10 @@ function App() {
   const { ref: roadStrip13, getAnimation: road13Animation } = useWebAnimations({
     keyframes: [
       { transform: 'translateX(0)' },
-      { transform: 'translateX(-200px)' }
+      { transform: 'translateX(-2500px)' }
     ],
     timing: {
-      duration: 4000,
+      duration: 12000,
       iterations: Infinity,
       direction: "normal"
     }
@@ -172,10 +175,10 @@ function App() {
   const { ref: roadStrip14, getAnimation: road14Animation } = useWebAnimations({
     keyframes: [
       { transform: 'translateX(0)' },
-      { transform: 'translateX(-200px)' }
+      { transform: 'translateX(-2500px)' }
     ],
     timing: {
-      duration: 4000,
+      duration: 12000,
       iterations: Infinity,
       direction: "normal"
     }
@@ -184,10 +187,57 @@ function App() {
   const { ref: roadStrip15, getAnimation: road15Animation } = useWebAnimations({
     keyframes: [
       { transform: 'translateX(0)' },
-      { transform: 'translateX(-200px)' }
+      { transform: 'translateX(-2500px)' }
     ],
     timing: {
-      duration: 4000,
+      duration: 12000,
+      iterations: Infinity,
+      direction: "normal"
+    }
+  });
+
+  
+
+  const { ref: road1, getAnimation: roadAnim1 } = useWebAnimations({
+    keyframes: [
+      { transform: 'translateX(0)' },
+      { transform: 'translateX(-2500px)' }
+    ],
+    timing: {
+      duration: 12000,
+      iterations: Infinity,
+      direction: "normal"
+    }
+  });
+  const { ref: road2, getAnimation: roadAnim2 } = useWebAnimations({
+    keyframes: [
+      { transform: 'translateX(0)' },
+      { transform: 'translateX(-2500px)' }
+    ],
+    timing: {
+      duration: 12000,
+      iterations: Infinity,
+      direction: "normal"
+    }
+  });
+  const { ref: road3, getAnimation: roadAnim3 } = useWebAnimations({
+    keyframes: [
+      { transform: 'translateX(0)' },
+      { transform: 'translateX(-2500px)' }
+    ],
+    timing: {
+      duration: 12000,
+      iterations: Infinity,
+      direction: "normal"
+    }
+  });
+  const { ref: road4, getAnimation: roadAnim4 } = useWebAnimations({
+    keyframes: [
+      { transform: 'translateX(0)' },
+      { transform: 'translateX(-2500px)' }
+    ],
+    timing: {
+      duration: 12000,
       iterations: Infinity,
       direction: "normal"
     }
@@ -198,6 +248,13 @@ function App() {
       <button onClick={() => {
         nice("very nice")
       }}>Click</button>
+
+      <div className="newRoad">
+        <img ref={ road1 } src={newRoad} className="img"/>
+        <img ref={ road2 } src={newRoad} className="img"/>
+        <img ref={ road3 } src={newRoad} className="img"/>
+        <img ref={ road4 } src={newRoad} className="img"/>
+      </div>
 
       <div className="road">
         <div ref={ roadStrip1 } className="roadStrip1"></div>
