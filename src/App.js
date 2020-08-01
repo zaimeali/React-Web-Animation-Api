@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
 
 // Web Animation API
@@ -63,20 +63,69 @@ function App() {
     }
   });
 
-  function start() {
+  const [start, setStart] = useState(false);
+  const [stop, setStop] = useState(true);
+  const [increase, setIncrease] = useState(true);
+  const [decrease, setDecrease] = useState(true);
 
+  const [speed, setSpeed] = useState(0);
+
+  function startBtn() {
+    highwayAnimation().play();
+    cityAnimation().play();
+    carAnimation().play();
+    wheel1Animation().play();
+    wheel2Animation().play();
+
+    setSpeed(carAnimation().playbackRate);
+
+    setStart(true);
+    setStop(false);
+    setIncrease(false);
+    setDecrease(false);
   }
 
-  function stop() {
+  function stopBtn() {
+    highwayAnimation().pause();
+    cityAnimation().pause();
+    carAnimation().pause();
+    wheel1Animation().pause();
+    wheel2Animation().pause();
+    
+    setSpeed(0);
 
+    setStart(false);
+    setStop(true);
+    setIncrease(true);
+    setDecrease(true);
   }
 
-  function increase() {
+  function increaseBtn() {
+    highwayAnimation().playbackRate = highwayAnimation().playbackRate + 1;
+    cityAnimation().playbackRate = cityAnimation().playbackRate + 1;
+    carAnimation().playbackRate = carAnimation().playbackRate + 1;
+    wheel1Animation().playbackRate = wheel1Animation().playbackRate + 1;
+    wheel2Animation().playbackRate = wheel2Animation().playbackRate + 1;
 
+    setSpeed(carAnimation().playbackRate);
+
+    if(highwayAnimation().playbackRate > 0){
+      setDecrease(false);
+    }
   }
 
-  function decrease() {
+  function decreaseBtn() {
+    highwayAnimation().playbackRate = highwayAnimation().playbackRate - 1;
+    cityAnimation().playbackRate = cityAnimation().playbackRate - 1;
+    carAnimation().playbackRate = carAnimation().playbackRate - 1;
+    wheel1Animation().playbackRate = wheel1Animation().playbackRate - 1;
+    wheel2Animation().playbackRate = wheel2Animation().playbackRate - 1;
+    
+    setSpeed(carAnimation().playbackRate);
 
+    if(highwayAnimation().playbackRate <= 0){
+      setDecrease(true);
+    }
   }
 
   useEffect(() => {
@@ -85,10 +134,12 @@ function App() {
     carAnimation().pause();
     wheel1Animation().pause();
     wheel2Animation().pause();
-  }, [highwayAnimation, cityAnimation, carAnimation, wheel1Animation, wheel2Animation])
+  }, [highwayAnimation, cityAnimation, carAnimation, wheel1Animation, wheel2Animation]);
 
   return (
     <div className="App">
+
+      <h1 className="speed">Your Speed is: <span className={ speed > 10 ? "speedRed" : speed > 5 ? "speedGreen" : "speedBlue" }>{ speed }KM/H</span></h1>
 
       <div className="hero">
         <div ref={ highway } className="highway" id="highway" />
@@ -105,10 +156,10 @@ function App() {
       </div>
 
       
-      <button onClick={ start } className="btn" id="start">Start</button>
-      <button disabled onClick={ stop } className="btn" id="stop">Stop</button>
-      <button disabled onClick={ increase } className="btn" id="increase">Increase</button>
-      <button disabled onClick={ decrease } className="btn" id="decrease">Decrease</button>
+      <button disabled={ start } onClick={ startBtn } className="btn" id="start">Start</button>
+      <button disabled={ stop } onClick={ stopBtn } className="btn" id="stop">Stop</button>
+      <button disabled={ increase } onClick={ increaseBtn } className="btn" id="increase">Increase</button>
+      <button disabled={ decrease } onClick={ decreaseBtn } className="btn" id="decrease">Decrease</button>
 
     </div>
   );
